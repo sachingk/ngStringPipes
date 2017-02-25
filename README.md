@@ -1,26 +1,35 @@
-#ngPipes
-
+#ngStringPipes
 
 ngPipes is a collection of most used pipes . 
 
-###Title Case : Converts a given string to title case. 
+## Pipes under this package 
 
-{ { 'john smith' | titleCase } }     // John Smith
-Truncate String : Truncates the string after specified length 
+- Title Case
+- Truncate String
+- Comma Seperated
 
-{ { 'john is a developer' | truncateString:true:9:"..." } }     // john is … 
+## Usage 
 
-Options
-1st Argument : wordWise - Boolean - if true, cut only by words bounds 
+###Title Case
+Converts a given string to title case. 
 
-2nd Argument : max - Number - max length of the text, cut to this number of chars 
+{ { 'john smith' | titleCase } }     // Outputs John Smith
 
-3rd Argument : tail - String - add this string to the input string if the string was cut. 
-Comma Seperated : Forms a comma seperated string for a given array 
+### Truncate String
+Truncates the string after specified length 
+
+{ { 'john is a developer' | truncateString:true:9:"..." } }     // outputs john is … 
+
+#### Options
+- 1st Argument : wordWise - Boolean - if true, cut only by words bounds 
+
+- 2nd Argument : max - Number - max length of the text, cut to this number of chars 
+
+- 3rd Argument : tail - String - add this string to the input string if the string was cut. 
+
+### Comma Seperated
+Forms a comma seperated string for a given array 
 
 stringList:string[]= ["Karan","Rohit","Santosh","Sachin","Chetan"] 
 
-{ { stringList | commaSeperated } }     // Karan,Rohit,Santosh,Sachin,Chetan
-
-
-
+{ { stringList | commaSeperated } }     // Outputs  Karan,Rohit,Santosh,Sachin,Chetan
